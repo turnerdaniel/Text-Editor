@@ -25,7 +25,7 @@ When finished, enter `:quit` to exit.
 
 ### Usage
 
-Haskell requires that operations are always performed on a variable. Therfore, each function must be provided with a parameter and assigned an output location. Example:
+Haskell requires that operations are always performed on a variable. Therefore, each function must be provided with a parameter and assigned an output location. Example:
 
 ```bash
 b = initialise a "The spectacle before us was indeed sublime"
