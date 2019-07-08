@@ -82,6 +82,10 @@ k = destroy j
 
 Entering `help` will display information on all available commands that can be performed. 
 
+## License
+
+Distributed under the GNU General Public License. Further information available at [LICENSE](LICENSE).
+
 ## Author
 
 Daniel Turner - [turnerdaniel](https://github.com/turnerdaniel/)
