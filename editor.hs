@@ -142,3 +142,11 @@ removeSpace [] = []
 removeSpace text
     | (head text) == ' ' = removeSpace(tail text)
     | otherwise = (head text) : removeSpace (tail text)
+
+help = putStrLn "Commands available for the Text Editor:\n\
+                \\n\
+                \   <statement>    execute <statement>\n\
+                \   create         Create a Text Editor instance\n\
+                \   ..."
+
+--TODO: Add help text + examples 
