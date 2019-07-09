@@ -12,7 +12,7 @@ The minimal installer is all that is required. It can be downloaded from the Has
 
 1. Open the terminal of your choice.
 2. Navigate to the directory containing `editor.hs`
-3. Launch the interactive compiler by entering:
+3. Launch the interactive compiler and interpret the script by entering:
    ```bash
    ghci editor
    ```
