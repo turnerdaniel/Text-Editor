@@ -1,4 +1,4 @@
-# Text-Editor
+# Text Editor
 A simple console-based text editor created in Haskell that was designed to be free from side-effects.
 
 ## Getting Started
@@ -49,34 +49,34 @@ Therefore, the text editor could be used like below:
 a = create
 > Line "" "" "" ""
 
-b = initialise a "The spectacle before us was indeed sublime"
-> Line "The spectacle before us was indeed sublime" "" "" ""
+b = initialise a "The spectacle before us was indeed sublime."
+> Line "The spectacle before us was indeed sublime." "" "" ""
 
-c = backspace b
-> Line "The spectacle before us was indeed sublim" "" "" ""
+c = selectWordLeft b
+> Line "The spectacle before us was indeed" " sublime." "" ""
 
-d = home c
-> Line "" "" "The spectacle before us was indeed sublim" ""
+d = backspace c
+> Line "The spectacle before us was indeed" "" "" ""
 
-e = wordRight d
-> Line "The " "" "spectacle before us was indeed sublim" ""
+e = write d " amazing!"
+> Line "The spectacle before us was indeed amazing!" "" "" ""
 
-f = selectWordRight e
-> Line "The " "spectacle " "before us was indeed sublim" ""
+f = home e
+> Line "" "" "The spectacle before us was indeed amazing!" ""
 
-g = cut f
-> Line "The " "" "before us was indeed sublim" "spectacle "
+g = selectWordRight f
+> Line "" "The " "spectacle before us was indeed amazing!" ""
 
-h = paste g
-> Line "The spectacle " "" "before us was indeed sublim" "spectacle "
+h = cut g
+> Line "" "" "spectacle before us was indeed amazing!" "The "
 
-i = open "demo.txt"
-> Line "The spectacle before us was indeed sublime" "" "" ""
+i = write h "This "
+> Line "This " "" "spectacle before us was indeed amazing!" "The "
 
-j = write i " but shocking"
-> Line "The spectacle before us was indeed sublime but shocking" "" "" ""
+save i "demo.txt"
+\demo.txt> "This spectacle before us was indeed amazing!"
 
-k = destroy j
+j = destroy i
 > []
 ```
 
